@@ -1,11 +1,14 @@
 <div class="header">
   <h3><i class="fa fa-check-circle-o"></i> <a>#uulm</a> Mensavoting</h3>
 </div>
+
+<mv-dialog></mv-dialog>
+
 <div class="meals">
-  <mv-meal ng-repeat="meal in day.Mensa.meals" meal="meal" date="day.date"></mv-meal>
+  <mv-meal ng-repeat="meal in day.Mensa.meals | orderBy:'-score'" meal="meal" date="day.date"></mv-meal>
 </div>
 
 
 <div class="footer">
-  <p>with ♥ from <a href="https://twitter.com/TimDaub">@TimDaub</a> | <a href="https://github.com/TimDaub/Mensavoter-Backend">Github: Backend</a> | <a href="https://github.com/TimDaub/Mensavoter-Backend">Github: Frontend</a></p>
+  <p>with ♥ from <a target="_blank" href="https://twitter.com/TimDaub">@TimDaub</a> | Github: <a target="_blank" href="https://github.com/TimDaub/Mensavoter-Backend">Backend</a> | <a target="_blank" href="https://github.com/TimDaub/Mensavoter-Frontend">Frontend</a></p>
 </div>
