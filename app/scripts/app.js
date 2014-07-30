@@ -18,7 +18,7 @@ angular.module('mensavoterFrontendApp', [
       });
 
     // Base URL of the Backend
-    RestangularProvider.setBaseUrl('http://localhost:3000');
+    RestangularProvider.setBaseUrl('http://uulm-mensavoting.herokuapp.com');
     // Set CORS Params
     RestangularProvider.setDefaultHeaders('Access-Control-Allow-Origin', 'http://127.0.0.1:9000');
     $httpProvider.defaults.withCredentials = true;
