@@ -5,10 +5,14 @@
         <div title="Upvote!" class="upvote" ng-click="vote(meal.id, 'up')"><i class="fa fa-sort-asc fa-3x upvote-icon"></i> </div>
         <div title="Downvote!" class="downvote" ng-click="vote(meal.id, 'down')"><i class="fa fa-sort-desc fa-3x downvote-icon"></i> </div>
       </div>
-      <ul class="infos col-sm-offset-1 col-sm-8">
+      <ul class="infos col-sm-offset-1 col-sm-7">
         <li class="category">{{meal.category}}</li>
         <li class="meal">{{meal.meal}}</li>
       </ul>
+      {{meal}}
+      <div class="scores col-sm-2">
+        {{meal.score}}
+      </div>
     </div>
   </div>
 </div>
