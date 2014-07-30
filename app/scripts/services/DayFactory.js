@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mensavoterFrontendApp')
-  .factory('DayFactory', function (Restangular, $q) {
+  .factory('DayFactory', function (Restangular, $q, $log) {
 
     var day;
 
