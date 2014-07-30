@@ -9,9 +9,12 @@
         <li class="category">{{meal.category}}</li>
         <li class="meal">{{meal.meal}}</li>
       </ul>
-      {{meal}}
       <div class="scores col-sm-2">
-        {{meal.score}}
+        <span class="score">{{meal.score}}</span>
+        <p>
+          <span class="upvotes-num">{{meal.upvotes}}</span>
+          <span class="downvotes-num">{{meal.downvotes}}</span>
+        </p>
       </div>
     </div>
   </div>

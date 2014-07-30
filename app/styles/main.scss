@@ -142,7 +142,7 @@ body {
 
 .downvote:hover {
     cursor: pointer;
-    background-color: $mvgreen;
+    background-color: $mvred;
     -webkit-transition: background-color $speed linear;
     -moz-transition: background-color $speed linear;
     -o-transition: background-color $speed linear;
@@ -173,6 +173,14 @@ div.scores {
     background-color: $mvred;
 }
 
+.mvfontgreen {
+    color: $mvgreen;
+}
+
+.mvfontred {
+    color: $mvred;
+}
+
 div.dialog {
     line-height: 5em;
     height: 5em;
@@ -185,4 +193,25 @@ div.dialog {
 .status {
     font-weight: bold;
     font-size: 2em;
+}
+
+span.score {
+    position: relative;
+    top:0.8em;
+    left:1.8em;
+    font-size: 2em;
+}
+
+span.upvotes-num {
+    color: $mvgreen;
+    position: relative;
+    top:1.2em;
+    left:2.6em;
+}
+
+span.downvotes-num {
+    color: $mvred;
+    position: relative;
+    top:1.2em;
+    left:4.3em;
 }
