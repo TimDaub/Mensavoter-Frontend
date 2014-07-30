@@ -11,7 +11,7 @@ angular.module('mensavoterFrontendApp')
       },
       controller: function($scope) {
 
-       $scope.vote = function(mealID, voting) {
+        $scope.vote = function(mealID, voting) {
           MealFactory.vote($scope.date, mealID, voting)
             .then(function(res) {
               $log.log(res);
