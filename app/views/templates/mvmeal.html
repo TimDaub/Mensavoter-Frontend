@@ -1,14 +1,21 @@
 <div class="row">
-  <div class="card col-sm-12">
+  <div class="card col-xs-12">
     <div class="row">
-      <div class="votes col-sm-2">
+      <div class="votes col-xs-2">
         <div title="Upvote!" class="upvote" ng-click="vote(meal.id, 'up')"><i class="fa fa-sort-asc fa-3x upvote-icon"></i> </div>
         <div title="Downvote!" class="downvote" ng-click="vote(meal.id, 'down')"><i class="fa fa-sort-desc fa-3x downvote-icon"></i> </div>
       </div>
-      <ul class="infos col-sm-offset-1 col-sm-8">
+      <ul class="infos col-xs-7 col-md-offset-1 col-md-7">
         <li class="category">{{meal.category}}</li>
         <li class="meal">{{meal.meal}}</li>
       </ul>
+      <div class="scores col-xs-3 col-md-2">
+        <span class="score">{{meal.score}}</span>
+        <p>
+          <span class="upvotes-num">{{meal.upvotes}}</span>
+          <span class="downvotes-num">{{meal.downvotes}}</span>
+        </p>
+      </div>
     </div>
   </div>
 </div>

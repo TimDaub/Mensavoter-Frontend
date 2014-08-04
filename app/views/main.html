@@ -1,8 +1,8 @@
 <div class="header">
-  <h3><i class="fa fa-check-circle-o"></i> <a>#uulm</a> Mensavoting</h3>
+  <h1><i class="fa fa-check-circle-o"></i> <a>#uulm</a> Mensa-Voting</h1>
 </div>
 
-<mv-dialog></mv-dialog>
+<div ng-show="!!error" class="dialog"><span class="status">Error:</span> {{error}}</div>
 
 <div class="meals">
   <mv-meal ng-repeat="meal in day.Mensa.meals | orderBy:'-score'" meal="meal" date="day.date"></mv-meal>

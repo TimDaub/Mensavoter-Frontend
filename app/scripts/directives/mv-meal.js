@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mensavoterFrontendApp')
-  .directive('mvMeal', function ($log, MealFactory) {
+  .directive('mvMeal', function ($log, MealFactory, DayFactory, $rootScope) {
     return {
       templateUrl: 'views/templates/mvmeal.html',
       restrict: 'EAC',
@@ -9,13 +9,21 @@ angular.module('mensavoterFrontendApp')
         meal: '=',
         date: '='
       },
-      controller: function($scope) {
+      controller: function($scope, $element) {
 
         $scope.vote = function(mealID, voting) {
           MealFactory.vote($scope.date, mealID, voting)
-            .then(function(res) {
-              $log.log(res);
+            .then(function() {
+
+              if(voting === 'up') {
+                $element.find('.upvote i').addClass('mvfontgreen');
+              } else {
+                $element.find('.downvote i').addClass('mvfontred');
+              }
+
+              DayFactory.setMealVote(mealID, voting);
             }, function(err) {
+              $rootScope.error = err.data;
               $log.error(err);
             });
         };
